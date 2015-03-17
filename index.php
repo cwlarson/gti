@@ -12,6 +12,11 @@
 	<?php include($root.'/_resources/partials/nav.html'); ?>
 
 	<div class="container">
+		<?php
+			echo("<pre>");
+			var_dump($_SERVER);
+			echo("</pre>");
+		?>
 		<h1>Guerra Technologies, Inc.</h1>
 		<h3>San Jose, Silicon Valley</h3>
 		<h3>RF Consulting, Design, Development, Evaluation, and Manufacturing Services</h3>
