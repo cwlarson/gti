@@ -2,7 +2,8 @@
 <html>
 <head>
 	<?php
-		$root = $_SERVER['DOCUMENT_ROOT'];
+// 		$root = $_SERVER['DOCUMENT_ROOT'];
+		$root = "http://" . $_SERVER['HTTP_HOST'];
 		include($root.'/_resources/partials/head.html');
 		include($root.'/_resources/global-vars.php');
 	?>
@@ -14,7 +15,7 @@
 	<div class="container">
 		<?php
 			echo("<pre>");
-			echo("http://" . $_SERVER['HTTP_HOST'] . "/_resources/partials/head.html" . "\n\n");
+// 			echo("http://" . $_SERVER['HTTP_HOST'] . "/_resources/partials/head.html" . "\n\n");
 			var_dump($_SERVER);
 			echo("</pre>");
 		?>
