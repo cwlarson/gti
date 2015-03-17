@@ -16,7 +16,7 @@
 		<h3>San Jose, Silicon Valley</h3>
 		<h3>RF Consulting, Design, Development, Evaluation, and Manufacturing Services</h3>
 		<div class="row">
-			<div class="col-sm-offset-2"></div>
+			<!-- <div class="col-sm-offset-2"></div> -->
 			<div class="col-sm-4">
 				<ul>
 					<li>Mixed-signal ASIC design</li>
