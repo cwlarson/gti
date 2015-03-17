@@ -2,8 +2,8 @@
 <html>
 <head>
 	<?php
-// 		$root = $_SERVER['DOCUMENT_ROOT'];
-		$root = "http://" . $_SERVER['HTTP_HOST'];
+		$root = $_SERVER['DOCUMENT_ROOT'];
+// 		$root = "http://" . $_SERVER['HTTP_HOST'];
 		include($root.'/_resources/partials/head.html');
 		include($root.'/_resources/global-vars.php');
 	?>
