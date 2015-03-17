@@ -3,7 +3,6 @@
 <head>
 	<?php
 		$root = $_SERVER['DOCUMENT_ROOT'];
-// 		$root = "http://" . $_SERVER['HTTP_HOST'];
 		include($root.'/_resources/partials/head.html');
 		include($root.'/_resources/global-vars.php');
 	?>
@@ -13,12 +12,6 @@
 	<?php include($root.'/_resources/partials/nav.html'); ?>
 
 	<div class="container">
-		<?php
-			echo("<pre>");
-// 			echo("http://" . $_SERVER['HTTP_HOST'] . "/_resources/partials/head.html" . "\n\n");
-			var_dump($_SERVER);
-			echo("</pre>");
-		?>
 		<h1>Guerra Technologies, Inc.</h1>
 		<h3>San Jose, Silicon Valley</h3>
 		<h3>RF Consulting, Design, Development, Evaluation, and Manufacturing Services</h3>
