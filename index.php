@@ -14,7 +14,7 @@
 	<div class="container">
 		<?php
 			echo("<pre>");
-			echo($_SERVER['HTTP_HOST']);
+			echo("http://" . $_SERVER['HTTP_HOST'] . "/_resources/partials/head.html" . "\n\n");
 			var_dump($_SERVER);
 			echo("</pre>");
 		?>
