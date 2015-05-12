@@ -1,5 +1,4 @@
 <?php
-	echo($_SERVER['DOCUMENT_ROOT']);
 	$currentYear = date('Y');
 	$contactInfo = array(
 			'phone' => array(
