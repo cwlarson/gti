@@ -125,6 +125,11 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 	z-index: 100;
 }
 
+.subnav li a {
+  /*padding-left: 0;*/
+  /*padding-right: 30px;*/
+}
+
 /* Main Content Styles */
 h1 {
   margin-bottom: 30px;

@@ -2,14 +2,15 @@
 <html>
 <head>
 	<?php
-		$root = $_SERVER['DOCUMENT_ROOT'];
-		include($root.'/_resources/partials/head.html');
-		include($root.'/_resources/global-vars.php');
+		include($_SERVER['DOCUMENT_ROOT'].'/_resources/php/global-functions.php');
+		echo $GLOBAL_HEAD;
 	?>
 </head>
 
 <body>
-	<?php include($root.'/_resources/partials/nav.html'); ?>
+	<?php
+		echo $GLOBAL_NAV;
+	?>
 
 	<div class="container">
 		<h1>Guerra Technologies, Inc.</h1>
@@ -37,9 +38,9 @@
 		</div>
 	</div>
 
-	<?php 
-		include($root.'/_resources/partials/footer.html');
-		include($root.'/_resources/partials/scripts.html');
+	<?php
+		echo $GLOBAL_FOOTER;
+		echo $GLOBAL_SCRIPTS;
 	?>
 </body>
 </html>

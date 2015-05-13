@@ -1,4 +1,12 @@
 <?php
+	set_include_path( get_include_path() . PATH_SEPARATOR . $_SERVER['DOCUMENT_ROOT'].'_resources' );
+	require 'php/global-variables.php';
+	require 'php/partials/head.php';
+	require 'php/partials/nav.php';
+	require 'php/partials/subnav.php';
+	require 'php/partials/footer.php';
+	require 'php/partials/scripts.php';
+
 	$currentYear = date('Y');
 	$contactInfo = array(
 			'phone' => array(
@@ -19,18 +27,6 @@
 			)
 		);
 	$priceUpdateDate = "4/3/07";
-
-	function isActiveNavItem($URI){
-		if($URI == ('/'.explode('/', $_SERVER['REQUEST_URI'])[1].'/'))
-			echo "active";
-	}
-
-	function subnavItem($URI, $label){
-		$isActive = ($_SERVER['REQUEST_URI'] == $URI ? 'active' : '');
-		echo("<li class='" . $isActive . "'>");
-		echo("<a href='" . $URI . "'>" . $label . "</a>");
-		echo("</li>");
-	}
 
 	function createCollapsibleTable($productInfo){
 		echo("<table class='collapsibleTable'>");

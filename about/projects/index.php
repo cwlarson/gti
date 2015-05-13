@@ -2,24 +2,25 @@
 <html>
 <head>
 	<?php
-		$root = $_SERVER['DOCUMENT_ROOT'];
-		include($root.'/_resources/partials/head.html');
-		include($root.'/_resources/global-vars.php');
+		include($_SERVER['DOCUMENT_ROOT'].'/_resources/php/global-functions.php');
+		echo $GLOBAL_HEAD;
 	?>
 </head>
 
 <body>
-	<?php include($root.'/_resources/partials/nav.html'); ?>
-	<?php include($root.'/_resources/partials/about-subnav.html'); ?>
+	<?php
+		echo $GLOBAL_NAV;
+		echo $GLOBAL_SUBNAV;
+	?>
 
 	<div class="container">
-		<h1>Consulting Services</h1>
+		<h1>Project Highlights</h1>
 
 	</div>
 
-	<?php 
-		include($root.'/_resources/partials/footer.html');
-		include($root.'/_resources/partials/scripts.html');
+	<?php
+		echo $GLOBAL_FOOTER;
+		echo $GLOBAL_SCRIPTS;
 	?>
 </body>
 </html>

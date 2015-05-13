@@ -2,16 +2,17 @@
 <html>
 <head>
 	<?php
-		$root = $_SERVER['DOCUMENT_ROOT'];
-		include($root.'/_resources/partials/head.html');
-		include($root.'/_resources/global-vars.php');
+		include($_SERVER['DOCUMENT_ROOT'].'/_resources/php/global-functions.php');
+		echo $GLOBAL_HEAD;
 	?>
 	<link rel="stylesheet" type="text/css" href="/_resources/css/products.css">
 </head>
 
 <body>
-	<?php include($root.'/_resources/partials/nav.html'); ?>
-	<?php include($root.'/_resources/partials/products-subnav.html'); ?>
+	<?php
+		echo $GLOBAL_NAV;
+		echo $GLOBAL_SUBNAV;
+	?>
 
 	<div class="container">
 		<h1>1575 MHz Stop-band Filter</h1>
@@ -112,9 +113,9 @@
 		</div>
 	</div>
 
-	<?php 
-		include($root.'/_resources/partials/footer.html');
-		include($root.'/_resources/partials/scripts.html');
+	<?php
+		echo $GLOBAL_FOOTER;
+		echo $GLOBAL_SCRIPTS;
 	?>
 </body>
 </html>

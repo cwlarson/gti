@@ -2,18 +2,19 @@
 <html>
 <head>
 	<?php
-		$root = $_SERVER['DOCUMENT_ROOT'];
-		include($root.'/_resources/partials/head.html');
-		include($root.'/_resources/global-vars.php');
+		include($_SERVER['DOCUMENT_ROOT'].'/_resources/php/global-functions.php');
+		echo $GLOBAL_HEAD;
 	?>
 </head>
 
 <body>
-	<?php include($root.'/_resources/partials/nav.html'); ?>
-	<?php include($root.'/_resources/partials/about-subnav.html'); ?>
+	<?php
+		echo $GLOBAL_NAV;
+		echo $GLOBAL_SUBNAV;
+	?>
 
 	<div class="container">
-		<h1>Consulting Services</h1>
+		<h1>Management Team</h1>
 
 	</div>
 

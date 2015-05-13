@@ -1,0 +1,24 @@
+table { border: 1px solid #DDD; }
+
+thead { background-color: #DDD; }
+
+tr:nth-child(even) { background-color: #F0F0F0; }
+
+td {
+	text-align: center;
+	padding: 5px 10px;
+	line-height: 1.2;
+}
+
+thead td::first-line { font-weight: bold; }
+
+span.collapsed-label { display: none; }
+
+@media screen and (max-width: 992px){
+	table.collapsible-table { width: 100%; }
+	
+	table.collapsible-table span.collapsed-label {
+		display: inline-block;
+	}
+}
+
