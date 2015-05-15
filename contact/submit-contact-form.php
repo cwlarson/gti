@@ -23,9 +23,8 @@ if(isset($_POST['input-interests'])){
 } else {
 	$interests = "(none selected)";
 }
-// error_log(print_r($_POST, true));
-$to = $_POST['input-email'];
-// error_log($to);
+
+$to = "caseywlarson@gmail.com";
 $subject = "Sending a test email from PHP!";
 $message = <<<MESSAGE
 	<html>
