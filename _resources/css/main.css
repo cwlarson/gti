@@ -150,3 +150,26 @@ footer {
 		margin: 0;
 		font-size: 12px;
 	}
+
+/* Other Styles */
+.featured {
+  width: 95%;
+  max-width: 850px;
+  margin: 25px auto;
+  border: 1px solid #DDD;
+  border-radius: 4px;
+  background-color: #EEE;
+  padding: 20px;
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+}
+.featured h3 {
+  margin-top: 0;
+}
+.featured img {
+  max-width: 100%;
+}
+@media screen and (max-width: 768px){
+  .featured {
+    text-align: center;
+  }
+}

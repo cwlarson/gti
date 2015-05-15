@@ -43,7 +43,7 @@ $GLOBAL_NAV = <<<NAVBAR
 						<ul class="dropdown-menu" role="menu">
 							<li class="dropdown-header">PRODUCTS</li>
 								{$navItem('/products/single-stage-lna/', 'Single Stage LNA')}
-								{$navItem('/products/low-noise-amplifiers/', 'Low Noise Amplifier')}
+								{$navItem('/products/low-noise-amplifier/', 'Low Noise Amplifier')}
 								{$navItem('/products/stop-band-filter/', 'Stop-Band Filter')}
 							<li class="divider"></li>
 							<li class="dropdown-header">SERVICES</li>

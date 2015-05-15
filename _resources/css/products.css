@@ -1,58 +1,42 @@
 table {
-	margin: 10px 0;
-	border: 1px solid #CCC;
-}
-thead {
-	background-color: #DDD;
-}
-th, td {
-	padding: 0 10px;
-	text-align: center;
-	border-style: solid;
-	border-width: 1px;
-	border-color: white #CCC;
-	vertical-align: bottom;
-	padding: 8px;
-}
-tr:nth-child(even) {
-	background: #F0F0F0;
-}
-table thead.units th {
-	font-weight: 400;
-}
+  border: 1px solid #DDD;
+  margin-bottom: 15px; }
+  @media screen and (max-width: 992px) {
+    table {
+      width: 100%;
+      max-width: 450px; } }
+  table thead {
+    background-color: #DDD; }
+  table tr:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.07); }
+  table tr td {
+    padding: 8px 12px;
+    line-height: 1.2;
+    text-align: center; }
+    @media screen and (max-width: 992px) {
+      table tr td {
+        text-align: left; } }
 
 @media screen and (max-width: 992px) {
-	table {
-		width: 100%;
-		max-width: 450px;
-		margin: 20px auto;
-	}
-	.collapsibleTable tr, .collapsibleTable td {
-		display: block;
-		text-align: left;
-	}
-	td {
-		position: relative;
-		line-height: 1.2;
-		min-width: 250px;
-		white-space: nowrap;
-		border: none;
-		border-bottom: 1px solid #DDD;
-		
-	}
-	span.label-xs {
-		width: 50%;
-		margin-right: 15px;
-		vertical-align: middle;
-		width: 50%;
-	}
-	span.value {
-		margin-left: 15px;
-		display: inline-block;
-		vertical-align: middle;
-		width: 50%;
-	}
-	ul {
-		padding-left: 25px;
-	}
-}
+  table.collapsible-table tr {
+    display: block; }
+    table.collapsible-table tr td {
+      display: block;
+      padding: 8px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.07); }
+      table.collapsible-table tr td span.collapsed-label {
+        display: inline-block;
+        width: 50%;
+        vertical-align: middle;
+        font-weight: 700; }
+      table.collapsible-table tr td span.value {
+        width: 45%;
+        display: inline-block;
+        vertical-align: middle; }
+        table.collapsible-table tr td span.value span.collapsed-units {
+          font-style: italic; } }
+
+.paypal-logo {
+  border-radius: 3px;
+  padding: 3px 8px;
+  box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.75); }

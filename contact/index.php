@@ -20,7 +20,7 @@
 		<div class="row">
 			<div class="col-sm-8" id="request-form-col">
 				<h3>Consulting &amp; Information Request Form</h3>
-				<form class="form-horizontal">
+				<form class="form-horizontal" action="submit-contact-form.php" method="post">
 					<!-- NAME Input -->
 					<div class="form-group">
 						<label for="input-name" class="col-sm-2 control-label">Name</label>
@@ -57,12 +57,12 @@
 							<input type="tel" class="form-control" id="input-phone" name="input-phone" placeholder="Phone">
 						</div>
 
-						<label for="input-email" class="col-sm-2 control-label">Call me</label>
+						<label for="input-available" class="col-sm-2 control-label">Call me</label>
 						<div class="col-sm-4">
-							<select class="form-control">
-								<option>Any time</option>
-								<option>Morning</option>
-								<option>Evening</option>
+							<select class="form-control" name="input-available">
+								<option value="at any time">Any time</option>
+								<option value="in the morning">Morning</option>
+								<option value="in the evening">Evening</option>
 							</select>
 						</div>
 					</div>
@@ -80,25 +80,25 @@
 						<label for="input-interests" class="col-sm-2 control-label">Areas of Interest</label>
 						<div class="col-sm-10">
 							<label for="input-interests-systems">
-								<input type="checkbox" id="input-interests-systems" name="input-interests" value="Systems"> Systems
+								<input type="checkbox" id="input-interests-systems" name="input-interests[]" value="Systems"> Systems
 							</label>
 							<label for="input-interests-asic">
-								<input type="checkbox" id="input-interests-asic" name="input-interests" value="ASIC"> ASIC
+								<input type="checkbox" id="input-interests-asic" name="input-interests[]" value="ASIC"> ASIC
 							</label>
 							<label for="input-interests-mixedSignal">
-								<input type="checkbox" id="input-interests-mixedSignal" name="input-interests" value="Mixed Signal"> Mixed Signal
+								<input type="checkbox" id="input-interests-mixedSignal" name="input-interests[]" value="Mixed Signal"> Mixed Signal
 							</label>
 							<label for="input-interests-mechanical">
-								<input type="checkbox" id="input-interests-mechanical" name="input-interests" value="Mechanical"> Mechanical
+								<input type="checkbox" id="input-interests-mechanical" name="input-interests[]" value="Mechanical"> Mechanical
 							</label>
 							<label for="input-interests-embedded">
-								<input type="checkbox" id="input-interests-embedded" name="input-interests" value="Embedded System Design"> Embedded System Design
+								<input type="checkbox" id="input-interests-embedded" name="input-interests[]" value="Embedded System Design"> Embedded System Design
 							</label>
 							<label for="input-interests-compliance">
-								<input type="checkbox" id="input-interests-compliance" name="input-interests" value="EMC/EMI Compliance"> EMC/EMI Compliance
+								<input type="checkbox" id="input-interests-compliance" name="input-interests[]" value="EMC/EMI Compliance"> EMC/EMI Compliance
 							</label>
 							<label for="input-interests-other">
-								<input type="checkbox" id="input-interests-other" name="input-interests" value="Other"> Other (include details below)
+								<input type="checkbox" id="input-interests-other" name="input-interests[]" value="Other"> Other (include details below)
 							</label>
 						</div>
 					</div>

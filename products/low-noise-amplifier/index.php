@@ -2,8 +2,10 @@
 <html>
 <head>
 	<?php
-		include($_SERVER['DOCUMENT_ROOT'].'/_resources/php/global-functions.php');
+		require $_SERVER['DOCUMENT_ROOT'].'/_resources/php/global-functions.php';
 		echo $GLOBAL_HEAD;
+		
+		require 'php/products-functions.php';
 	?>
 	<link rel="stylesheet" type="text/css" href="/_resources/css/products.css">
 </head>
@@ -38,32 +40,95 @@
 				<h3>Specifications:</h3>
 				<?php
 					createCollapsibleTable([
-						  0 => [
-						  	  'Model #' => 'ILA1575-1'
-						  	, 'Frequency<br/>MHz' => '1575'
-						  	, 'Gain<br/>dB, min' => '35'
-						  	, 'Noise Figure<br/>dB, max' => '3'
-						  	, 'Output 1 dB Comp Pt.<br/>dBm, min' => '+7'
-						  	, 'VSWR In / Out<br/>typical' => '2.5 / 1.9'
-						  	, 'DC Curr @ 3.3-12 VDC<br/>mA, typical' => '26 @ 4 volts'
+						0 => [
+						  	'Model #' => [
+								'value' => 'ILA1575-1',
+								'units' => ''
+							]
+							,'Frequency' => [
+						  		'value' => '1575',
+						  		'units' => 'MHz'
+						  	]
+						  	, 'Gain' => [
+						  		'value' => '35',
+						  		'units' => 'dB, min'
+						  	]
+						  	, 'Noise Figure' => [
+						  		'value' => '3',
+						  		'units' => 'dB, max'
+						  	]
+						  	, 'Output 1 dB Comp Pt.' => [
+						  		'value' => '+7',
+						  		'units' => 'dBm, min'
+						  	]
+						  	, 'VSWR In / Out' => [
+								'value' => '2.5 / 1.9',
+								'units' => 'typical'
+						  	]
+						  	, 'DC Curr @ 3.3-12 VDC' => [
+						  		'value' => '26 @ 4 volts',
+						  		'units' => 'mA, typical'
+						  	]
 						]
 						, 1 => [
-						  	  'Model #' => 'ILA1575-2'
-						  	, 'Frequency<br/>MHz' => '1575'
-						  	, 'Gain<br/>dB, min' => '24'
-						  	, 'Noise Figure<br/>dB, max' => '3'
-						  	, 'Output 1 dB Comp Pt.<br/>dBm, min' => '+7'
-						  	, 'VSWR In / Out<br/>typical' => '2.5 / 1.9'
-						  	, 'DC Curr @ 3.3-12 VDC<br/>mA, typical' => '26 @ 4 volts'
+						  	'Model #' => [
+								'value' => 'ILA1575-2',
+								'units' => ''
+							]
+							,'Frequency' => [
+						  	  	'value' => '1575',
+						  	  	'units' => 'MHz'
+						  	]
+						  	, 'Gain' => [
+						  		'value' => '24',
+						  		'units' => 'dB, min'
+						  	]
+						  	, 'Noise Figure' => [
+						  		'value' => '3',
+						  		'units' => 'dB, max'
+						  	]
+						  	, 'Output 1 dB Comp Pt.' => [
+						  		'value' => '+7',
+						  		'units' => 'dBm, min'
+						  	]
+						  	, 'VSWR In / Out' => [
+						  		'value' => '2.5 / 1.9',
+						  		'units' => 'typical'
+						  	]
+						  	, 'DC Curr @ 3.3-12 VDC' => [
+						  		'value' => '26 @ 4 volts',
+						  		'units' => 'mA, typical'
+						  	]
 						]
 						, 2 => [
-						  	  'Model #' => 'ILA1575-3'
-						  	, 'Frequency<br/>MHz' => '1575'
-						  	, 'Gain<br/>dB, min' => '16'
-						  	, 'Noise Figure<br/>dB, max' => '2'
-						  	, 'Output 1 dB Comp Pt.<br/>dBm, min' => '+10'
-						  	, 'VSWR In / Out<br/>typical' => '3.0 / 3.0'
-						  	, 'DC Curr @ 3.3-12 VDC<br/>mA, typical' => '26 @ 4 volts'
+						  	'Model #' => [
+								'value' => 'ILA1575-3',
+								'units' => ''
+							]
+							,'Frequency' => [
+						  		'value' => '1575',
+						  		'units' => 'MHz'
+						  	]
+						  	, 'Gain' => [
+						  		'value' => '16',
+						  		'units' => 'dB, min'
+						  	]
+						  	, 'Noise Figure' => [
+						  		'value' => '2',
+						  		'units' => 'dB, max'
+						  	]
+						  	, 'Output 1 dB Comp Pt.' => [
+						  		'value' => '+10',
+						  		'units' => 'dBm, min'
+						  	]
+						  	, 'VSWR In / Out' => [
+						  		'value' => '3.0 / 3.0',
+						  		'units' => 'typical'
+						  	]
+						  	, 'DC Curr @ 3.3-12 VDC' => [
+						  		'value' => '26 @ 4 volts',
+						  		'units' => 'mA, typical'
+						  	]
 						]
 					]);
 				?>
@@ -80,26 +145,71 @@
 				<h3>Physical Dimensions</h3>
 				<?php
 					createCollapsibleTable([
-						  0 => [
-						  	  'Model #' => 'ILA1575-1'
-						  	, 'Length' => '2.35"'
-						  	, 'Width' => '0.80"'
-						  	, 'Body Length' => '1.60"'
-						  	, 'Depth' => '0.30"'
+						0 => [
+						  	'Model #' => [
+								'value' => 'ILA1575-1',
+								'units' => ''
+							]
+							,'Length' => [
+						  	  	'value' => '2.35"',
+						  	  	'units' => ''
+						  	  ]
+						  	, 'Width' => [
+						  		'value' => '0.80"',
+						  		'units' => ''
+						  	]
+						  	, 'Body Length' => [
+						  		'value' => '1.60"',
+						  		'units' => ''
+						  	]
+						  	, 'Depth' => [
+						  		'value' => '0.30"',
+						  		'units' => ''
+						  	]
 						]
 						, 1 => [
-						  	  'Model #' => 'ILA1575-2'
-						  	, 'Length' => '2.35"'
-						  	, 'Width' => '0.80"'
-						  	, 'Body Length' => '1.60"'
-						  	, 'Depth' => '0.30"'
+						  	'Model #' => [
+								'value' => 'ILA1575-2',
+								'units' => ''
+							]
+							,'Length' => [
+						  		'value' => '2.35"',
+						  		'units' => ''
+						  	]
+						  	, 'Width' => [
+						  		'value' => '0.80"',
+						  		'units' => ''
+						  	]
+						  	, 'Body Length' => [
+						  		'value' => '1.60"',
+						  		'units' => ''
+						  	]
+						  	, 'Depth' => [
+						  		'value' => '0.30"',
+						  		'units' => ''
+						  	]
 						]
 						, 2 => [
-						  	  'Model #' => 'ILA1575-3'
-						  	, 'Length' => '3.00"'
-						  	, 'Width' => '0.80"'
-						  	, 'Body Length' => '1.54"'
-						  	, 'Depth' => '0.70"'
+						  	'Model #' => [
+								'value' => 'ILA1575-3',
+								'units' => ''
+							]
+							,'Length' => [
+						  		'value' => '3.00"',
+						  		'units' => ''
+						  	]
+						  	, 'Width' => [
+						  		'value' => '0.80"',
+						  		'units' => ''
+						  	]
+						  	, 'Body Length' => [
+						  		'value' => '1.54"',
+						  		'units' => ''
+						  	]
+						  	, 'Depth' => [
+						  		'value' => '0.70"',
+						  		'units' => ''
+						  	]
 						]
 					]);
 				?>
@@ -117,33 +227,66 @@
 
 		<div class="row">
 			<div class="col-xs-12">
-				<h3>Pricing</h3>
-				<table>
-					<thead>
-						<th>Model</th>
-						<th>Unit Price</th>
-						<th></th>
-					</thead>
-					<tr>
-						<td>ILA1575-1 (35 dB Gain)</td>
-						<td>$260.00</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>ILA1575-2 (24 dB Gain)</td>
-						<td>$260.00</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>ILA1575-3 (16 dB Gain)</td>
-						<td>$260.00</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td colspan="2">Quantity pricing available</td>
-						<td></td>
-					</tr>
-				</table>
+				<h3>Pricing &amp; Delivery</h3>
+				<?php
+					createCollapsibleTable([
+						0 => [
+							'Model #' => [
+								'value' => 'ILA1575-1',
+								'units' => ''
+							]
+							,'Unit Price' => [
+								'value' => '$260.00',
+								'units' => ''
+							]
+							, 'Purchase' => [
+								'value' => '<img class="paypal-logo" src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/PP_logo_h_100x26.png" alt="Buy now with PayPal" />',
+								'units' => ''
+							]
+							, 'Delivery Time' => [
+								'value' => 'Two weeks',
+								'units' => ''
+							]
+						]
+						, 1 => [
+							'Model #' => [
+								'value' => 'ILA1575-2',
+								'units' => ''
+							]
+							,'Unit Price' => [
+								'value' => '$260.00',
+								'units' => ''
+							]
+							, 'Purchase' => [
+								'value' => '<img class="paypal-logo" src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/PP_logo_h_100x26.png" alt="Buy now with PayPal" />',
+								'units' => ''
+							]
+							, 'Delivery Time' => [
+								'value' => 'Two weeks',
+								'units' => ''
+							]
+						]
+						, 2 => [
+							'Model #' => [
+								'value' => 'ILA1575-3',
+								'units' => ''
+							]
+							,'Unit Price' => [
+								'value' => '$260.00',
+								'units' => ''
+							]
+							,'Purchase' => [
+								'value' => '<img class="paypal-logo" src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/PP_logo_h_100x26.png" alt="Buy now with PayPal" />',
+								'units' => ''
+							]
+							, 'Delivery Time' => [
+								'value' => 'Two weeks',
+								'units' => ''
+							]
+						]
+					]);
+				?>
+			
 				<p><b><u>IMPORTANT</u>: Microsoft Internet Explorer users: Make sure your pop-up blocker is turned OFF in order to view transaction information.  Or, hold the "Ctrl" key down when clicking on "Add to Cart" or "View Cart" buttons.</b></p>
 
 				<small>Prices and specifications subject to change without notice.  Updated <?php echo($priceUpdateDate); ?></small>

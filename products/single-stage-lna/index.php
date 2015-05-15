@@ -40,14 +40,35 @@
 				<h3>Specifications:</h3>
 				<?php
 					createCollapsibleTable([
-						  0 => [
-						  	  'Model #' => 'LNA1575-1'
-						  	, 'Frequency<br/>MHz' => '1575'
-						  	, 'Gain<br/>dB, min' => '18'
-						  	, 'Noise Figure<br/>dB, max' => '0.5'
-						  	, 'Output 1 dB Comp Pt.<br/>dBm, min' => '+14'
-						  	, 'VSWR In / Out<br/>typical' => '3 / 1'
-						  	, 'DC Curr @ 3.3-12 VDC<br/>mA, typical' => '19'
+						0 => [
+						  	'Model #' => [
+								'value' => 'LNA1575-1',
+								'units' => ''
+							]
+							,'Frequency' => [
+						  		'value' => '1575',
+						  		'units' => 'MHz'
+						  	]
+						  	, 'Gain' => [
+						  		'value' => '18',
+						  		'units' => 'dB, min'
+						  	]
+						  	, 'Noise Figure' => [
+						  		'value' => '0.5',
+						  		'units' => 'dB, max'
+						  	]
+						  	, 'Output 1 dB Comp Pt.' => [
+						  		'value' => '+14',
+						  		'units' => 'dBm, min'
+						  	]
+						  	, 'VSWR In / Out' => [
+						  		'value' => '3 / 1',
+						  		'units' => 'typical'
+						  	]
+						  	, 'DC Curr @ 3.3-12 VDC' => [
+						  		'value' => '19',
+						  		'units' => 'mA, typical'
+						  	]
 						]
 					]);
 				?>
@@ -65,11 +86,26 @@
 				<?php
 					createCollapsibleTable([
 						  0 => [
-						  	  'Model #' => 'LNA1575-1'
-						  	, 'Length' => '1.55"'
-						  	, 'Width' => '0.800"'
-						  	, 'Body Length' => '0.750"'
-						  	, 'Depth' => '0.300"'
+						  	  'Model #' => [
+						  		'value' => 'LNA1575-1',
+						  		'units' => ''
+						  	]
+						  	, 'Length' => [
+						  		'value' => '1.55"',
+						  		'units' => ''
+						  	]
+						  	, 'Width' => [
+						  		'value' => '0.800"',
+						  		'units' => ''
+						  	]
+						  	, 'Body Length' => [
+						  		'value' => '0.750"',
+						  		'units' => ''
+						  	]
+						  	, 'Depth' => [
+						  		'value' => '0.300"',
+						  		'units' => ''
+						  	]
 						]
 					]);
 				?>
@@ -87,23 +123,29 @@
 
 		<div class="row">
 			<div class="col-xs-12">
-				<h3>Pricing</h3>
-				<table>
-					<thead>
-						<th>Model</th>
-						<th>Unit Price</th>
-						<th></th>
-					</thead>
-					<tr>
-						<td>ILA1575-1 (35 dB Gain)</td>
-						<td>$260.00</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td colspan="2">Quantity pricing available</td>
-						<td></td>
-					</tr>
-				</table>
+				<h3>Pricing &amp; Delivery</h3>
+				<?php
+					createCollapsibleTable([
+						0 => [
+							'Model #' => [
+								'value' => 'ILA1575-1',
+								'units' => ''
+							]
+							,'Unit Price' => [
+								'value' => '$260.00',
+								'units' => ''
+							]
+							, 'Purchase' => [
+								'value' => '<img class="paypal-logo" src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/PP_logo_h_100x26.png" alt="Buy now with PayPal" />',
+								'units' => ''
+							]
+							, 'Delivery Time' => [
+								'value' => 'Two weeks',
+								'units' => ''
+							]
+						]
+					]);
+				?>
 				<p><b><u>IMPORTANT</u>: Microsoft Internet Explorer users: Make sure your pop-up blocker is turned OFF in order to view transaction information.  Or, hold the "Ctrl" key down when clicking on "Add to Cart" or "View Cart" buttons.</b></p>
 
 				<small>Prices and specifications subject to change without notice.  Updated <?php echo($priceUpdateDate); ?></small>
