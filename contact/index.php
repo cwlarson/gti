@@ -20,7 +20,7 @@
 		<div class="row">
 			<div class="col-sm-8" id="request-form-col">
 				<h3>Consulting &amp; Information Request Form</h3>
-				<form class="form-horizontal" action="submit-contact-form.php" method="post">
+				<form id="contactForm" class="form-horizontal" action="submit-contact-form.php" method="post">
 					<!-- NAME Input -->
 					<div class="form-group">
 						<label for="input-name" class="col-sm-2 control-label">Name</label>
@@ -123,11 +123,11 @@
 				<table id="contact-info-table">
 					<tr>
 						<td>Phone:</td>
-						<td><?php echo $contactInfo['phone']['office']; ?></td>
+						<td><?= $contactInfo['phone']['office']; ?></td>
 					</tr>
 					<tr>
 						<td>Fax:</td>
-						<td><?php echo $contactInfo['phone']['fax']; ?></td>
+						<td><?= $contactInfo['phone']['fax']; ?></td>
 					</tr>
 					<tr>
 						<td>Email:</td>
@@ -136,15 +136,15 @@
 					<tr>
 						<td>Office:</td>
 						<td>
-							<?php echo $contactInfo['address']['physical']['line1']; ?> <br/>
-							<?php echo $contactInfo['address']['physical']['line2']; ?>
+							<?= $contactInfo['address']['physical']['line1']; ?> <br/>
+							<?= $contactInfo['address']['physical']['line2']; ?>
 						</td>
 					</tr>
 					<tr>
 						<td>Mailing:</td>
 						<td>
-							<?php echo $contactInfo['address']['mailing']['line1']; ?> <br/>
-							<?php echo $contactInfo['address']['mailing']['line2']; ?>
+							<?= $contactInfo['address']['mailing']['line1']; ?> <br/>
+							<?= $contactInfo['address']['mailing']['line2']; ?>
 						</td>
 					</tr>
 				</table>
@@ -159,6 +159,46 @@
 		echo $GLOBAL_FOOTER;
 		echo $GLOBAL_SCRIPTS;
 	?>
+	<script type="text/javascript">
+		var fieldHasValue = function(inputFieldName){
+			var inputField = $('input[name="'+inputFieldName+'"]');
+			if(inputField.val().length > 0){
+				inputField.removeClass('invalid');
+				return true;
+			} else {
+				inputField.addClass('invalid');
+				return false;
+			}
+		};
+
+		var isValidEmail = function(inputFieldName) {
+			var inputField = $('input[name="'+inputFieldName+'"]');
+			var pattern = /^[\w.%+-]+@(([a-z0-9][-\w]*[a-z0-9]*\.)+[a-z]{2,4})$/i;
+
+			if(pattern.test(inputField.val())
+			   && inputField.val().length > 0
+			   && inputField.val().length < 50){
+				inputField.removeClass('invalid');
+				return true;
+			} else {
+				inputField.addClass('invalid');
+				return false;
+			}
+		};
+
+		$('#contactForm').submit(function(e){
+			var valid =	fieldHasValue('input-name');
+			valid &= fieldHasValue('input-company');
+			valid &= fieldHasValue('input-address-street');
+			valid &= fieldHasValue('input-address-city');
+			valid &= fieldHasValue('input-address-state');
+			valid &= fieldHasValue('input-address-zip');
+			valid &= fieldHasValue('input-phone');
+			valid &= isValidEmail('input-email');
+
+			if(!valid) e.preventDefault();
+		})
+	</script>
 </body>
 </html>
 

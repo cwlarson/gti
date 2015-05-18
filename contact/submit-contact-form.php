@@ -94,15 +94,11 @@ MESSAGE;
 $headers = array();
 $headers[] = "MIME-Version: 1.0";
 $headers[] = "Content-type: text/html; charset=iso-8859-1";
-$headers[] = "From: webmaster@caseywlarson.com";
-$headers[] = "Reply-To: webmaster@caseywlarson.com";
+$headers[] = "From: Guerra Technologies Inc. <info@guerra-tech.com>";
+$headers[] = "Reply-To: info@guerra-tech.com";
 $headers[] = "X-Mailer: PHP/" . phpversion();
-error_log($to);
-error_log($subject);
-error_log($message);
-error_log(implode("\r\n", $headers));
-$m = mail($to, $subject, $message, implode("\r\n", $headers), "-femail.address@example.com");
-if($m) {
+
+if(mail($to, $subject, $message, implode("\r\n", $headers), "-femail.address@example.com")) {
 	echo "<h2 class='text-success'>Thank you for submitting your inquiry.</h2><p>We will get back to you as soon as possible.</p>";
 } else {
 	echo "<h2 class='text-danger'>Error submitting form.  Please try again.</h2>";

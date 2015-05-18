@@ -23,6 +23,11 @@ label[for^='input-interests-'] {
 }
 input[name="input-interests"] { margin-right: 5px; }
 
+input.invalid {
+	border: 1px solid #bf0000;
+	box-shadow: 0 0 4px -1px #bf0000;
+}
+
 #contact-info-table td {
 	vertical-align: top;
 	padding-bottom: 10px;
