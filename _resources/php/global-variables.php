@@ -5,7 +5,6 @@
 		'email' => 'info@guerra-tech.com'
 		,'phone' => array(
 			'office' => '(408) 839-2203',
-			'fax' => '(408) 741-5444',
 			'mobile' => '(408) 813-5744'
 		)
 		

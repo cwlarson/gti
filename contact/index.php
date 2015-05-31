@@ -126,10 +126,6 @@
 						<td><?= $contactInfo['phone']['office']; ?></td>
 					</tr>
 					<tr>
-						<td>Fax:</td>
-						<td><?= $contactInfo['phone']['fax']; ?></td>
-					</tr>
-					<tr>
 						<td>Email:</td>
 						<td><a href="mailto:<?php echo $contactInfo['email']; ?>">Email us</a></td>
 					</tr>

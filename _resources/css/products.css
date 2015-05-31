@@ -37,6 +37,15 @@ table {
           font-style: italic; } }
 
 .paypal-logo {
-  border-radius: 3px;
-  padding: 3px 8px;
+  border-radius: 6px;
   box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.75); }
+  .paypal-logo:hover {
+    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.75); }
+
+.paypal-checkout-form {
+  vertical-align: middle; }
+  .paypal-checkout-form input, .paypal-checkout-form img {
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    vertical-align: middle; }
